@@ -45,6 +45,7 @@ public interface ActeurRepository extends CrudRepository<Acteur, Long> {
 	List<Acteur> findActeursParFilmParuAnnee(@Param("annee") int annee);
 
 	/** Recherche tous les acteurs ayant joué dans un film produit dans le pays dont le nom est passé en paramètre
+	 * ASTUCE: il faut supprimer les doublons avec un DISTINCT
 	 * @param nom nom du pays
 	 * @return List
 	 */
